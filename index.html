@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Highway Racing</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <header>
+            <h1>🏎️ HIGHWAY RACING</h1>
+            <p>Avoid traffic and survive as long as possible!</p>
+        </header>
+
+        <!-- Game Information -->
+        <div class="game-info">
+
+            <div class="info-box">
+                <span>Score</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Lives</span>
+                <strong id="lives">3</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Speed</span>
+                <strong id="speed">1</strong>
+            </div>
+
+        </div>
+
+        <!-- Game Canvas -->
+        <div class="game-area">
+
+            <canvas id="gameCanvas" width="500" height="600"></canvas>
+
+            <!-- Start Screen -->
+            <div id="startScreen" class="overlay">
+
+                <div class="overlay-content">
+
+                    <h2>🏁 HIGHWAY RACING</h2>
+
+                    <p>Get ready for the race!</p>
+
+                    <div class="instructions">
+
+                        <h3>How to Play</h3>
+
+                        <p>⬅️ Move your car left</p>
+                        <p>➡️ Move your car right</p>
+                        <p>🚗 Avoid enemy cars</p>
+                        <p>⭐ Earn 10 points for every car avoided</p>
+                        <p>❤️ You have 3 lives</p>
+
+                    </div>
+
+                    <button id="startButton">START GAME</button>
+
+                </div>
+
+            </div>
+
+            <!-- Game Over Screen -->
+            <div id="gameOverScreen" class="overlay">
+
+                <div class="game-over-content">
+
+                    <h1>GAME OVER!</h1>
+
+                    <img
+                        src="./images/crash.png"
+                        alt="Crash screen"
+                        class="crash-image"
+                    >
+
+                    <h2>
+                        YOUR SCORE:
+                        <span id="finalScore">0</span>
+                    </h2>
+
+                    <p class="crash-message">Better luck next time!</p>
+
+                    <button id="restartButton">🔄 PLAY AGAIN</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Mobile Touch Controls -->
+        <div class="mobile-controls">
+
+            <button id="leftButton" class="control-button">
+                ◀
+            </button>
+
+            <span>STEERING</span>
+
+            <button id="rightButton" class="control-button">
+                ▶
+            </button>
+
+        </div>
+
+        <!-- Instructions -->
+        <div class="controls-info">
+
+            <h3>Game Controls</h3>
+
+            <p>
+                PC: Use Left and Right Arrow Keys
+            </p>
+
+            <p>
+                Android: Use the Left and Right buttons
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
